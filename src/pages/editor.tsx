@@ -5,7 +5,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 import { api } from "~/utils/api";
 import { Navbar } from "~/components/Navbar";
-import { Editor as EditorComponent } from "~/components/Editor";
+import EditorComponent from "~/components/Editor";
 
 const Editor: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });

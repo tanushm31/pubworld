@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
         <ul className="flex flex-row items-center gap-4">
           <li>
             <a
-              href="#"
+              href="./"
               className="rounded-full py-1 px-3 text-white no-underline hover:bg-rose-400"
             >
               Home
@@ -18,10 +18,10 @@ export const Navbar: React.FC = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="./editor"
               className="rounded-full py-1 px-3 text-white no-underline hover:bg-rose-400"
             >
-              About
+              Editor
             </a>
           </li>
         </ul>

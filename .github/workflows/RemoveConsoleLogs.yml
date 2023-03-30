@@ -1,1 +1,24 @@
+# Create a Github Action To Automatically replace all "console.log..." statements from .ts,.tsx,.js and.jsx files using regex to "// console.log..."
+# This is a simple example of how to use regex to replace text in a file
 
+name: Remove Console Logs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "/^((?!\/\/|\/\\*).)*console.log*/igm" # Check this regex to make sure it works for your needs 
+          replace: "// console.log"
+          regex: true
+          include: "**/*.{ts,js,jsx,tsx,cshtml}"

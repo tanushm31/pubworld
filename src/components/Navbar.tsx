@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Navbar: React.FC = () => {
+  console.log("navbar rendered");
   return (
     <nav className="flex w-full flex-row items-center justify-between py-4 px-6 text-white">
       <div className="flex flex-row items-center gap-4">

@@ -18,7 +18,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
-          find: "/^((?!\/\/|\/\\*).)*console.log*/igm" # Check this regex to make sure it works for your needs 
+          find: /^((?!\/\/|\/\\*).)*console.log*/igm # Check this regex to make sure it works for your needs 
           replace: "// console.log"
           regex: true
           include: "**/*.{ts,js,jsx,tsx,cshtml}"
